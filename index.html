@@ -1,0 +1,86 @@
+<!-- Justin Weber -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Stylesheets -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="./src/css/main.css" rel="stylesheet"/>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Assignment 1 [OOP REVIEW]</h1>
+      <form id="dataForm">
+        <div class="form-group">
+          <label for="schoolField">School(static):</label>
+          <input type="text" class="form-control" id="schoolField" onload="popSchool()">
+        </div>
+        <div class="form-group">
+          <label for="nameField">Name:</label>
+          <input type="text" class="form-control" id="nameField" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="gradesField">Grades:</label>
+          <input type="text" class="form-control" id="gradesField" placeholder="Grades">
+        </div>
+        <div class="form-group">
+          <label for="computerField">Computer Type:</label>
+          <input type="text" class="form-control" id="computerField" placeholder="Computer">
+        </div>
+
+        <button type="button" class="btn btn-success" onclick="addStudent()">Add Student</button>
+        <button type="button" class="btn btn-primary" onclick="showTable()">Done</button>
+      </form>
+
+
+      <table id="dataTable" class="table table-striped">
+        <thead>
+          <tr id="myRow">
+            <td>Name</td>
+            <td>Grades</td>
+            <td>AVG</td>
+            <td>Computer</td>
+            <td>College</td>
+          </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+
+
+    <script type="text/javascript" src="./src/js/jquery-3.2.1.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="./src/js/utils.js"></script>
+    <script type="text/javascript" src="./src/js/main.js"></script>
+  </body>
+</html>
+
+
+<!--
+* Five classes minimum (2 concrete/derived classes, the Abstract/Super class, the class for composition and the Utility Class)
+(X) * Create a Utility class with at least one static method that is used and shown in the output (ie, the average of something)
+(X) * A static property is used.  Make sure you indicate by commenting the top of your HTML file what line of code contains the static property.
+() * Show one level of inheritance with polymorphism (Method override) Make sure the Abstract(Base) class is NOT instantiated
+() * Composition and/or aggregation is used. The 'owner' object has at least one object. Make sure some property is outputted of the the child object. (The child object is the object that the owner object has instantiated)
+() * A looping process is used to create instances of at least three of your objects
+() * Store all references of the objects in a Data Structure (array / list)
+() * All classes must make sense and serve a purpose to the scenario that you choose
+() * All instantiated classes must have at least 1 instance / member variable(property). Make sure the values for at least one of the instance variables value is unique to each instance such as "name"
+(X) * After all objects are instantiated, invoke a function named displayInfo() that will display all the objects and their instance variables and a static variable in browser using HTML
+(X) * The data being used is collected from an HTML form for the JavaScript version. Do not hard code the data.
+
+() * All of your JavaScript is adequately commented. All methods and member variables are explained in comments just above their declarations
+(X) * The JavaScript version is styled using CSS
+() * For the Python version of the assignment everything is done in console. NO HTML.  use Python's input() function to get the user input and print() function to display it.
+-->
