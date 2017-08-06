@@ -1,9 +1,10 @@
 <!-- Justin Weber -->
+<!-- Line 23 is my static property -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Assignment 1 [OOP REVIEW]: JavaScript</title>
 
     <!-- Stylesheets -->
     <!-- Latest compiled and minified CSS -->
@@ -15,27 +16,30 @@
   <body>
 
     <div class="container">
-      <h1>Assignment 1 [OOP REVIEW]</h1>
+      <h1>Assignment 1 [OOP REVIEW] - Employee Management and Weekly Calculator</h1>
       <form id="dataForm">
         <div class="form-group">
-          <label for="schoolField">School(static):</label>
-          <input type="text" class="form-control" id="schoolField" onload="popSchool()">
+          <label for="employerField">Employer (static):</label>
+          <input type="text" class="form-control" id="employerField">
         </div>
         <div class="form-group">
-          <label for="nameField">Name:</label>
-          <input type="text" class="form-control" id="nameField" placeholder="Name">
+          <label for="employeeName">Employee Name:</label>
+          <input type="text" class="form-control" id="employeeName" placeholder="Name">
         </div>
         <div class="form-group">
-          <label for="gradesField">Grades:</label>
-          <input type="text" class="form-control" id="gradesField" placeholder="Grades">
+          <label for="employeeHours">Daily Hours (separated by spaces):</label>
+          <input type="text" class="form-control" id="employeeHours" placeholder="Hours">
         </div>
         <div class="form-group">
-          <label for="computerField">Computer Type:</label>
-          <input type="text" class="form-control" id="computerField" placeholder="Computer">
+          <label for="employeePosition">Title of Position:</label>
+          <input type="text" class="form-control" id="employeePosition" placeholder="Position">
         </div>
-
-        <button type="button" class="btn btn-success" onclick="addStudent()">Add Student</button>
-        <button type="button" class="btn btn-primary" onclick="showTable()">Done</button>
+        <div class="form-group">
+          <label for="parkingSpotNumber">Parking Spot Number:</label>
+          <input type="text" class="form-control" id="parkingSpotNumber" placeholder="Parking Spot Number">
+        </div>
+        <button type="button" class="btn btn-success" onclick="addEmployee()">Add Employee</button>
+        <button type="button" class="btn btn-primary" onclick="calculateTotals()">Calculate Hours</button>
       </form>
 
 
@@ -43,17 +47,19 @@
         <thead>
           <tr id="myRow">
             <td>Name</td>
-            <td>Grades</td>
+            <td>Hours</td>
             <td>AVG</td>
-            <td>Computer</td>
-            <td>College</td>
+            <td>Position</td>
+            <td>Employer</td>
           </tr>
         </thead>
 
-        <tbody>
+        <tbody id="dataBody">
 
         </tbody>
       </table>
+
+      <div id="totalContainer"></div>
     </div>
 
 
@@ -72,15 +78,15 @@
 (X) * Create a Utility class with at least one static method that is used and shown in the output (ie, the average of something)
 (X) * A static property is used.  Make sure you indicate by commenting the top of your HTML file what line of code contains the static property.
 () * Show one level of inheritance with polymorphism (Method override) Make sure the Abstract(Base) class is NOT instantiated
-() * Composition and/or aggregation is used. The 'owner' object has at least one object. Make sure some property is outputted of the the child object. (The child object is the object that the owner object has instantiated)
-() * A looping process is used to create instances of at least three of your objects
-() * Store all references of the objects in a Data Structure (array / list)
-() * All classes must make sense and serve a purpose to the scenario that you choose
-() * All instantiated classes must have at least 1 instance / member variable(property). Make sure the values for at least one of the instance variables value is unique to each instance such as "name"
+(x) * Composition and/or aggregation is used. The 'owner' object has at least one object. Make sure some property is outputted of the the child object. (The child object is the object that the owner object has instantiated)
+(x) * A looping process is used to create instances of at least three of your objects
+(x) * Store all references of the objects in a Data Structure (array / list)
+(x) * All classes must make sense and serve a purpose to the scenario that you choose
+(x) * All instantiated classes must have at least 1 instance / member variable(property). Make sure the values for at least one of the instance variables value is unique to each instance such as "name"
 (X) * After all objects are instantiated, invoke a function named displayInfo() that will display all the objects and their instance variables and a static variable in browser using HTML
 (X) * The data being used is collected from an HTML form for the JavaScript version. Do not hard code the data.
 
-() * All of your JavaScript is adequately commented. All methods and member variables are explained in comments just above their declarations
+(x) * All of your JavaScript is adequately commented. All methods and member variables are explained in comments just above their declarations
 (X) * The JavaScript version is styled using CSS
 () * For the Python version of the assignment everything is done in console. NO HTML.  use Python's input() function to get the user input and print() function to display it.
 -->
