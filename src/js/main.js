@@ -14,6 +14,10 @@ class Person {
   getHoursString () {
     return "Whenever I want!";
   }
+  // Method to display different parking string if the position title equals boss.
+  getParkingString () {
+    return "I park my Heli on the roof!";
+  }
 }
 
 // Creating an Employee class and inheriting from Person object.
@@ -32,6 +36,10 @@ class Employee extends Person {
   getHoursString() {
     // make sure the hour string is right
     return this.position.hours;
+  }
+  // Method to display different parking string if the position title equals anything except boss.
+  getParkingString() {
+    return this.parkingSpotNumber;
   }
 }
 
@@ -181,6 +189,12 @@ function displayInfo() {
     or a employee which will show position title*/
     var cell = document.createElement("td");
     var cellText = document.createTextNode(currentPersonOrEmployee.getTitleString());
+    cell.appendChild(cellText);
+    row.appendChild(cell);
+
+    // Creating a table data/cell that will display parking spot number.
+    var cell = document.createElement("td");
+    var cellText = document.createTextNode(currentPersonOrEmployee.getParkingString());
     cell.appendChild(cellText);
     row.appendChild(cell);
 

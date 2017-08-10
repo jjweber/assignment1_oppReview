@@ -17,7 +17,7 @@ class Utils {
     });
 
     // Dividing the total by the length of the passed array.
-    return total / arr.length;
+    return Math.ceil(total / arr.length);
   }
 
   // Method that takes in an array of numbers to calculate all employee hours.
