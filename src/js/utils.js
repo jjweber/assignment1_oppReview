@@ -16,7 +16,7 @@ class Utils {
       total += e;
     });
 
-    // Dividing the total by the length of the passed array.
+    // Dividing the total by the length of the passed array and rounding it.
     return Math.ceil(total / arr.length);
   }
 
